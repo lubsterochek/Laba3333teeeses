@@ -1,3 +1,5 @@
+package main;
+
 import donkeysAndShorties.Donkey;
 import donkeysAndShorties.Shorty;
 import help.*;
@@ -14,11 +16,11 @@ public class Main {
         Zoo zoo = new Zoo("ИТМО");
 
         ZooWorker worker1 = new ZooWorker("Итмошник", zoo);
-        zoo.getInhabitants().add(worker1);
+        zoo.addHuman(worker1);
         ZooWorker worker2 = new ZooWorker("Вшэшник", zoo);
-        zoo.getInhabitants().add(worker2);
+        zoo.addHuman(worker2);
         ZooWorker worker3 = new ZooWorker("Спбгушник", zoo);
-        zoo.getInhabitants().add(worker3);
+        zoo.addHuman(worker3);
 
         Donkey donkey1 = new Donkey("Шашлык");
         zoo.getDonkeys().add(donkey1);
@@ -28,13 +30,13 @@ public class Main {
         zoo.getDonkeys().add(donkey3);
 
         Passerby passerby1 = new Passerby("Юра", city);
-        city.getInhabitants().add(passerby1);
+        city.addHuman(passerby1);
         Passerby passerby2 = new Passerby("Вася", city);
-        city.getInhabitants().add(passerby2);
+        city.addHuman(passerby2);
         Passerby passerby3 = new Passerby("Петя", city);
-        city.getInhabitants().add(passerby3);
+        city.addHuman(passerby3);
         Passerby passerby4 = new Passerby("Варя", city);
-        city.getInhabitants().add(passerby4);
+        city.addHuman(passerby4);
 
         Shorty shorty1 = new Shorty("Полторашка");
         city.getShorties().add(shorty1);

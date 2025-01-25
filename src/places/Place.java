@@ -18,7 +18,12 @@ public abstract class Place implements INamed {
         return name;
     }
 
-    public void addHuman(Human human) {inhabitants.add(human);}
+    public void addHuman(Human human) {
+        if (inhabitants.contains(human)) {
+            inhabitants.remove(human);
+        }
+        inhabitants.add(human);
+    }
 
     public void removeHuman(Human human) {inhabitants.remove(human);}
 

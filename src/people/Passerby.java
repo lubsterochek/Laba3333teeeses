@@ -4,6 +4,7 @@ import help.ActionResult;
 import help.ActionType;
 import help.Logger;
 import places.Place;
+import java.util.Objects;
 
 public class Passerby extends Human implements IDie {
     public Passerby(String name, Place place) {
@@ -13,10 +14,18 @@ public class Passerby extends Human implements IDie {
     @Override
     public void worsenState() {
         switch (state) {
-            case HAPPY: state = State.CONCERNED; break;
-            case CONCERNED: state = State.STRESSED; break;
-            case STRESSED: state = State.FEARFUL; break;
-            case FEARFUL, PANICKING: state = State.PANICKING; break;
+            case HAPPY:
+                state = State.CONCERNED;
+                break;
+            case CONCERNED:
+                state = State.STRESSED;
+                break;
+            case STRESSED:
+                state = State.FEARFUL;
+                break;
+            case FEARFUL, PANICKING:
+                state = State.PANICKING;
+                break;
         }
     }
 
